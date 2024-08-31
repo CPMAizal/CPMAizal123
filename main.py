@@ -22,7 +22,7 @@ from rich.style import Style
 from cpmnuker import CPMNuker
 
 __CHANNEL_USERNAME__ = "ToolsCPM"
-__GROUP_USERNAME__   = "ToolCPMChat"
+__GROUP_USERNAME__   = "ToolsCPMChat"
 
 def signal_handler(sig, frame):
     print("\n Bye Bye...")
