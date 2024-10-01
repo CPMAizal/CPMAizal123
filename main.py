@@ -7,10 +7,10 @@ from rich.console import Console
 from rich.prompt import Prompt, IntPrompt
 from rich.text import Text
 from rich.style import Style
-from cpmtool import CPMtool
+from carparktool import CarParkTool
 
-__CHANNEL_USERNAME__ = "cpmtool"
-__GROUP_USERNAME__   = "cpmtool_chat"
+__CHANNEL_USERNAME__ = "CPMAizal"
+__GROUP_USERNAME__   = "CPMAizalChat"
 
 def signal_handler(sig, frame):
     print("\n Bye Bye...")
@@ -50,8 +50,8 @@ def banner(console):
     colorful_text = gradient_text(brand_name, colors)
     console.print(colorful_text)
     console.print("[bold][red]==================================================================[/red][/bold]")
-    console.print("\t  [bold] [yellow]                     𝐂𝐏𝐌 𝐀𝐈𝐙𝐀𝐋")
-    console.print("   [bold][red]  𝐒𝐇𝐀𝐑𝐈𝐍𝐆 𝐓𝐇𝐄 𝐀𝐂𝐂𝐄𝐒𝐒 𝐊𝐄𝐘 𝐈𝐒 𝐍𝐎𝐓 𝐀𝐋𝐋𝐎𝐖𝐄𝐃 𝐀𝐍𝐃 𝐖𝐈𝐋𝐋 𝐁𝐄 𝐁𝐋𝐎𝐂𝐊𝐄𝐃[/bold][red]")
+    console.print("\t  [bold] [yellow]                    𝐂𝐏𝐌 𝐀𝐈𝐙𝐀𝐋")
+    console.print("   [bold][red] 𝐒𝐇𝐀𝐑𝐈𝐍𝐆 𝐓𝐇𝐄 𝐀𝐂𝐂𝐄𝐒𝐒 𝐊𝐄𝐘 𝐈𝐒 𝐍𝐎𝐓 𝐀𝐋𝐋𝐎𝐖𝐄𝐃 𝐀𝐍𝐃 𝐖𝐈𝐋𝐋 𝐁𝐄 𝐁𝐋𝐎𝐂𝐊𝐄𝐃[/bold][red]")
     console.print("   [bold][green] 𝐋𝐎𝐆𝐎𝐔𝐓 𝐅𝐑𝐎𝐌 𝐂𝐏𝐌 𝐁𝐄𝐅𝐎𝐑𝐄 𝐔𝐒𝐈𝐍𝐆 𝐓𝐇𝐈𝐒 𝐓𝐎𝐎𝐋 [/bold][green]")
     console.print("   [bold][white] 𝐂𝐎𝐍𝐓𝐀𝐂𝐓 𝐖𝐈𝐓𝐇 𝐌𝐄 𝐓𝐎 𝐁𝐔𝐘 𝐀𝐍 𝐔𝐍𝐋𝐈𝐌𝐈𝐓𝐄𝐃 𝐁𝐀𝐋𝐀𝐍𝐂𝐄 𝐓𝐆 @𝐈𝐭𝐳𝐀𝐢𝐳𝐚𝐥 [/bold][white]")
     console.print(f"   [bold purple]𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 [/bold purple]: [bold purple]@CPMAizal[/bold purple] 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐂𝐡𝐚𝐭 [bold purple]@CPMAizalChat[/bold purple]") 
@@ -110,7 +110,7 @@ def interpolate_color(start_color, end_color, fraction):
     interpolated_rgb = tuple(int(start + fraction * (end - start)) for start, end in zip(start_rgb, end_rgb))
     return "{:02x}{:02x}{:02x}".format(*interpolated_rgb)
 
-#cpmtool @abobalol228 @cpmtool
+#cpmaizal @ItzAizal @CPMAizal
 
 def rainbow_gradient_string(customer_name):
     modified_string = ""
@@ -132,7 +132,7 @@ if __name__ == "__main__":
         acc_password = prompt_valid_value("[bold][?] Account Password[/bold]", "Password", password=False)
         acc_access_key = prompt_valid_value("[bold][?] Access Key[/bold]", "Access Key", password=False)
         console.print("[bold cyan][%] Trying to Login[/bold cyan]: ", end=None)
-        cpm = CPMtool(acc_access_key)
+        cpm = CarParkTool(acc_access_key)
         login_response = cpm.login(acc_email, acc_password)
         if login_response != 0:
             if login_response == 100:
